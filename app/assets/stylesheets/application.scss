@@ -1,3 +1,39 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	background: #f9f9f9;
+	border-right: 80px solid red;
+	min-height: 100vh;
+	@media (max-width: 768px) {
+		border-top: 80px solid red;
+		border-right: none;
+		min-height: inherit;
+	}
+}
+
+.logo {
+	position: absolute;
+	right: 5px;
+	top: 46vh;
+	width: 70px;
+	@media (max-width: 768px) {
+		top: 5px;
+		left: 50%;
+		margin-left: -35px;
+	}
+}
+
+.home {
+	padding: 30px;
+	max-width: 50%;
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
+	h1 {
+		color: red;
+		font-size: 18px;
+		margin-top: 0;
+	}
+}

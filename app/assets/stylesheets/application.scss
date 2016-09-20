@@ -5,23 +5,43 @@
 body {
 	background: #f9f9f9;
 	border-right: 80px solid #339BF5;
-	min-height: 100vh;
+	min-height: 110vh;
+	margin-top:-20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
 	@media (max-width: 768px) {
 		border-top: 80px solid #339BF5;
 		border-right: none;
 		min-height: inherit;
+		margin-top:0px;
 	}
 }
 
+nav {
+	text-align: left;
+}
+
 .logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	right: 5px;
+	color: #FFBC00;
+	right: 10px;
 	top: 46vh;
-	width: 70px;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	border: 4px solid #FFBC00;
 	@media (max-width: 768px) {
 		top: 5px;
 		left: 50%;
 		margin-left: -35px;
+	}
+	i {
+		text-align: center;
 	}
 }
 
@@ -35,5 +55,12 @@ body {
 		color: red;
 		font-size: 18px;
 		margin-top: 0;
+	}
+}
+
+.main-header {
+	padding-top: 20px;
+	@media (max-width: 768px) {
+		margin-top:0px;
 	}
 }

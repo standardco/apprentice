@@ -7,16 +7,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/e795c6fc1a.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <section>
+  <section class="main-header">
     <header>
-      <h1>William Johnson Jr</h1>
-      <h2 class="lead">Thrill Seeker. Coffee Drinker. Web Developer.</h2>
+      <h1 class="text-center">William Johnson Jr</h1>
+      <h3 class="text-center"><strong>Thrill Seeker. Coffee Drinker. Web Developer.</strong></h3>
     </header>
   </section>
-
+  <section>
+    <nav class="text-center">
+      <a href="/">Home</a> |
+      <a href="/answers/">FAQ</a>
+    </nav>
+  </section>
+  <aside>
+    <figure class="logo">
+      <i class="fa fa-cog fa-3x fa-spin" aria-hidden="true"></i>
+    </figure>
+  </aside>
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% end %>

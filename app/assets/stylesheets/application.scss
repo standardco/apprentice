@@ -3,7 +3,8 @@
 @import "bootstrap";
 
 body {
-	background: #f9f9f9;
+	background: darken(#6E7070, 20%);
+	color: lighten(#FFBC00, 10%);
 	border-right: 80px solid #339BF5;
 	min-height: 110vh;
 	margin-top:-20px;
@@ -15,6 +16,8 @@ body {
 		border-right: none;
 		min-height: inherit;
 		margin-top:0px;
+		min-width: 100vw;
+		padding-right: 30px;
 	}
 }
 
@@ -37,8 +40,7 @@ nav {
 	border: 4px solid #FFBC00;
 	@media (max-width: 768px) {
 		top: 5px;
-		left: 50%;
-		margin-left: -35px;
+		left: 47%;
 	}
 	i {
 		text-align: center;

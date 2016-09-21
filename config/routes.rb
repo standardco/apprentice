@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   
-  get "/answers" => "answers#show"
+  get "/answers" => "answers#index"
 
   devise_for :users
   

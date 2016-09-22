@@ -11,25 +11,29 @@
         center: {lat: 33.45115165, lng: -84.47746155},
         zoom: 8
     });
-    function getLocations(data){
-      console.log(data);
+    var markersArray = []
+    function makeMarkers(locations){
+      console.log(locations)
+      locations.forEach(function(location){
+        location.lat = Number(location.lat);
+        location.lng = Number(location.lng);
+        markersArray.push(location);
+      });
     }
-    function httpGetAsync(theUrl)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                getLocations(xmlHttp.responseText);
-        }
-        xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-        xmlHttp.send(null);
-    }
-    // var marker = new google.maps.Marker({
-    //   position: 
-    //   map: map,
-    //   title: 'Hello World!'
-    // });
-    httpGetAsync("http://localhost:3000/locations");
+    $.ajax({
+      url: "http://localhost:3000/markers",
+      success: console.log("Location retrieval success!"),
+      dataType: 'json'
+    }).then(function(locations){
+      makeMarkers(locations);
+      markersArray.forEach(function(location, index){
+        var marker = new google.maps.Marker({
+          position: {lat: location.lat, lng: location.lng},
+          map: map,
+          title: 'Marker'
+        });
+      })
+    });
   }    
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcIecppzG4vbgx-iT0f4YhbiRNr4J2dKM&callback=initMap"async defer></script>

@@ -23,6 +23,11 @@
       <a href="/answers/">FAQ</a>
     </nav>
   </section>
+  <section>
+    <figure>
+      <div id="map"></div>
+    </figure>
+  </section>
   <figure class="logo">
     <i class="fa fa-cog fa-3x fa-spin" aria-hidden="true"></i>
   </figure>
@@ -34,6 +39,15 @@
   <% end %>
   <%= yield %>
   <%= render 'layouts/google_analytics' %>
-  <script src="https://maps.googleapis.com/maps/api/js?key=key=AIzaSyDcIecppzG4vbgx-iT0f4YhbiRNr4J2dKM&callback=initMap"async defer></script>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+      });
+    }    
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcIecppzG4vbgx-iT0f4YhbiRNr4J2dKM&callback=initMap"async defer></script>
 </body>
 </html>

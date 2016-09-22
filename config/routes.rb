@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :map
+
   resources :answers
 
   root 'home#index'

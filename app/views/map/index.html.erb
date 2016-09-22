@@ -1,0 +1,37 @@
+<h1>Apprentice Map</h1>
+<section>
+  <figure class="map-container col-xs-11" style="height: 400px;">
+    <div id="map" style="height: 100%;"></div>
+  </figure>
+</section>
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 33.45115165, lng: -84.47746155},
+        zoom: 8
+    });
+    var markersArray = []
+    function makeMarkers(locations){
+      locations.forEach(function(location){
+        location.lat = Number(location.lat);
+        location.lng = Number(location.lng);
+        markersArray.push(location);
+      });
+    }
+    $.ajax({
+      url: "http://localhost:3000/markers",
+      dataType: 'json'
+    }).then(function(locations){
+      makeMarkers(locations);
+      markersArray.forEach(function(location, index){
+        var marker = new google.maps.Marker({
+          position: {lat: location.lat, lng: location.lng},
+          map: map,
+          title: 'Marker'
+        });
+      })
+    });
+  }    
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcIecppzG4vbgx-iT0f4YhbiRNr4J2dKM&callback=initMap"async defer></script>

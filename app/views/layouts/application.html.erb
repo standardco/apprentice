@@ -37,6 +37,7 @@
     <p class="alert"><%= alert %></p>
   <% end %>
   <%= yield %>
+  <%= yield :scripts %>
   <%= render 'layouts/google_analytics' %>
 </body>
 </html>

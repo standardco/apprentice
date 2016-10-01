@@ -1,25 +1,11 @@
-<div class="home">
-	<h1>Standard Apprentice: a game for people who want to work at Standard Code</h1>
-	<p>Nice! You figured out how to make your browser look like an iPhone 6! Why is this important? Since 50% of all traffic is mobile, it's critical that you know how to test things in mobile viewing mode from your browser.
-	<p>You also pulled down the repo, bundled, migrated, and have postgresql running! This is a basic Rails scaffold and a few bells and whistles that we tend to use in many of our projects. You can read about the extras here: <a href="https://github.com/codeisstandard/rails-starter-kit">github.com/codeisstandard/rails-starter-kit</a></p>
-	<p>So let's move on to your next challenge!</p>
-	<ol>
-		<li>Create a homepage. It can be about anything. Just give us a sense of you and what you like!</li>
-		<li>Create a FAQ page about yourself and link to it. We'd like to route to /answers.</li>
-		<li>Create a simple scaffold to add content to your FAQ page and answer the following questions:
-			<ul>
-				<li>What is your name?</li>
-				<li>What is your email?</li>
-				<li>What is your Github url?</li>
-				<li>What is your LinkedIn url?</li>
-				<li>Can you tell us why we asked you to fork this repo instead of clone it?</li>
-				<li>Tell us about your favorite coding project of all time? What was great about it?</li>
-			</ul>
-			<small>*You can <a href="http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Basic.html" target="_blank">password protect</a> this page if you like. Just remember to share the password with us.</small>
-		</li>
-		<li>Deploy the site to Heroku.</li>
-		<li>Send your Heroku app link to <a href="mailto:apprentice@standardco.de">apprentice@standardco.de</a>. We will reply to your email with one more challenge!</li>
-	</ol>
-	<p>Remember, if you have issues, ask for help!</p>
-	<p>Game on!</p>
+maps<div class="home">
+	<div class="sherri-info">
+		<h1>Sherri Mitchell</h1>
+    <p>Hi! I'm Sherri and I am a software engineer. This may seem like a simple phrase, but for me it represents a special part of a journey that I began a long time ago. Over a year and a half ago, I was well into my career as a technical business analyst and I decided to change careers. I had always wanted to be a developer, but I kept that dream tucked safely away waiting for that point in time where all the stars would align and I would have the freedom to pursue it. One day I realized that there really is no perfect time, and that the present was as perfect as it gets. I took a leap of faith in myself and began to do self-study, and then eventually graduated from a boot camp back-end engineering program. Since my graduation, I have continued to learn on my own, volunteer, and attend meetups. This summer I was fortunate to have been chosen as an intern for the Rails Girls Summer of Code. Since July, my team mate and I have been working on an open source project called Open Source Event Management System (OSEM) <a href="https://github.com/openSUSE/osem">here is a link to the repository on Github</a>. <a href="https://github.com/openSUSE/osem">OSEM</a> is <i>an event management tool tailored to Free and Open Source Software conferences</i>. The project code base is much bigger than any I had ever worked on, and I remember being extremely intimidated when we started. I thought to myself that I had taken on too much, and there was no way that I could be successful since I didn't know everything about coding. At some point during this process, I realized that I didn't need to know everything about coding. No one does. In fact, the magic (and the fun) is in not knowing and being on the quest to find out.</p>
+    <p>I saw a statistic that says 80% of people aged 45 and over consider changing their careers, but only 6% actually do. I wish that I could tell the other 74% how great it is on the other side! I love what I do, and I look forward to my future in the industry.</p>
+    <p>Besides coding, I also love to spend time with my family, play tennis, fix various appliances around my house, and do things to try and use up the copious amounts of glue, cloth, wood, etc. that seem to find their way into my 'craft room'.</p>
+
+    <p>If you'd like to learn a few more fun facts about me you can go here <%= link_to "FAQs", answers_path %>.</p>
+	</div>
+	<p><%= link_to "Map", maps_map_path %></p>
 </div>
